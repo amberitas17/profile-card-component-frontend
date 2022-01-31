@@ -1,0 +1,161 @@
+body{
+    height: 100px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: hsl(185, 75%, 39%);
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bg-pattern-top {
+	position: absolute;
+	background-image: url("./images/bg-pattern-top.svg");
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-size: cover;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 1000px;
+	transform: translateY(-50%);
+	z-index: -1;
+}
+
+.bg-pattern-bottom {
+	background-image: url("./images/bg-pattern-bottom.svg");
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	opacity: 0.7;
+	bottom: 0;
+	right: 0;
+	width: 50%;
+	height: 1000px;
+	transform: translateY(50%);
+	z-index: -1;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 410px;
+  margin: 2rem;
+  background: #fefefe;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container .header{
+    background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	text-align: center;
+	border-top-left-radius: 14px;
+	border-top-right-radius: 14px;
+    overflow: hidden;
+}
+.container .header img{
+    width: 100%;
+}
+
+.container .content img {
+	border: solid white 4px;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    margin-top: -4rem;
+}
+
+.container .content {
+    padding: 1rem;
+}
+
+.container .content h1{
+    margin-top: 10px;
+    color: hsl(229, 23%, 23%);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.container .content span {
+    color: hsl(227, 10%, 46%);
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.container .content p {
+    margin-top: 10px;
+    color: hsl(227, 10%, 46%);
+    font-weight: normal;
+    margin-left: 0.5rem;
+}
+
+.container .content {
+    margin-bottom: 40px;
+}
+
+.container .social {
+  flex: 0.2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 2px solid #d8d9df;
+  padding: 1rem;
+  color: hsl(229, 23%, 23%);
+}
+
+.container .social .socialitem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .social .socialitem .number{
+    font-size: 20px;
+    font-weight: 700;
+}
+.container .social .socialitem .item{
+    color: hsl(227, 10%, 46%);
+    margin-top: 10px;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+}
+
+@media (min-width: 992px) {
+    body{
+        --pattern-ratio: 0.5;
+        --bottom-pattern-pos: 35vw 40vh;
+    }
+}
+
+@media (max-width: 767px){
+    body{
+        --pattern-ratio: 0.4;
+    }
+}
